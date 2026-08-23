@@ -1,0 +1,6 @@
+.env
+__pycache__/
+*.pyc
+board_watcher.log
+dashboard.html
+.claude/
