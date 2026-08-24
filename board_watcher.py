@@ -219,7 +219,9 @@ def build_notification_text(results: dict[str, dict]) -> str:
     for name, result in results.items():
         if result.get("new"):
             for title, url in result["new"]:
-                lines.append(f"[{name}] {title}\n{url}")
+                tags = categorize_title(title)
+                tag_text = "".join(f"[{t}]" for t in tags)
+                lines.append(f"[{name}]{tag_text} {title}\n{url}")
     return "\n\n".join(lines)
 
 
