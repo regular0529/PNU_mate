@@ -821,16 +821,19 @@ header.top {{
     var listEl = document.getElementById('appliedList');
     var emptyEl = document.getElementById('appliedEmpty');
     var countEl = document.getElementById('appliedCount');
+    var byUrl = {{}};
+    document.querySelectorAll('.panel li[data-url]').forEach(function(li) {{ byUrl[li.dataset.url] = li; }});
     var items = [];
-    document.querySelectorAll('.panel li[data-url]').forEach(function(li) {{
-      var entry = state[li.dataset.url];
+    Object.keys(state).forEach(function(url) {{
+      var entry = state[url];
       if (!entry || !entry.applied) return;
-      var link = li.querySelector('a');
+      var li = byUrl[url];
+      var link = li ? li.querySelector('a') : null;
       items.push({{
-        url: li.dataset.url,
-        title: link ? link.textContent : li.dataset.url,
-        deadline: li.dataset.deadline || null,
-        board: li.dataset.board || '',
+        url: url,
+        title: link ? link.textContent : (entry.title || url),
+        deadline: li ? (li.dataset.deadline || null) : (entry.deadline || null),
+        board: li ? (li.dataset.board || '') : (entry.board || ''),
       }});
     }});
     items.sort(function(a, b) {{
@@ -872,10 +875,17 @@ header.top {{
   document.querySelectorAll('.apply-btn').forEach(function(btn) {{
     btn.addEventListener('click', function() {{
       var url = btn.dataset.url;
+      var li = btn.closest('li');
       state[url] = state[url] || {{}};
       state[url].applied = !state[url].applied;
+      if (state[url].applied) {{
+        var link = li.querySelector('a');
+        state[url].title = link ? link.textContent : url;
+        state[url].board = li.dataset.board || '';
+        state[url].deadline = li.dataset.deadline || null;
+      }}
       saveState(state);
-      applyRowStyle(btn.closest('li'));
+      applyRowStyle(li);
       renderAppliedList();
     }});
   }});
