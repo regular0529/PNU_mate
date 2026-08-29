@@ -245,6 +245,11 @@ header.top {
 .tag-공모전 { color: var(--purple); }
 .tag-마감임박 { color: var(--red); }
 .tag-마감됨 { color: var(--text-faint); }
+.tag-해외도전 { color: #fff; background: var(--red); border-color: var(--red); }
+.panel li.is-priority {
+  border-left-color: var(--red);
+  background: color-mix(in srgb, var(--red) 12%, transparent);
+}
 .panel li.is-expired { opacity: 0.55; }
 .panel li.is-expired a { text-decoration: line-through; }
 .panel a {
@@ -395,7 +400,7 @@ header.top {
 <body>
 <header class="top">
   <div class="brand"><span class="live-dot"></span>PNU MATE<span class="unit">WATCH</span></div>
-  <span class="timestamp">마지막 확인 2026-08-29 03:58</span>
+  <span class="timestamp">마지막 확인 2026-08-29 09:10</span>
   <div class="stats">
     <div class="stat stat-new"><span class="num">0</span><span class="label">새 글</span></div>
     <div class="stat"><span class="num">6</span><span class="label">정상</span></div>
@@ -429,6 +434,7 @@ header.top {
     <button class="filter-btn" data-tag="채용">채용</button>
     <button class="filter-btn" data-tag="공모전">공모전</button>
     <button class="filter-btn" data-tag="마감임박">마감임박</button>
+    <button class="filter-btn" data-tag="해외도전">해외도전</button>
     <button class="filter-btn" id="favBtn" data-fav="1">☆ 즐겨찾기만</button>
   </div>
 </div>
@@ -536,16 +542,19 @@ header.top {
     var listEl = document.getElementById('appliedList');
     var emptyEl = document.getElementById('appliedEmpty');
     var countEl = document.getElementById('appliedCount');
+    var byUrl = {};
+    document.querySelectorAll('.panel li[data-url]').forEach(function(li) { byUrl[li.dataset.url] = li; });
     var items = [];
-    document.querySelectorAll('.panel li[data-url]').forEach(function(li) {
-      var entry = state[li.dataset.url];
+    Object.keys(state).forEach(function(url) {
+      var entry = state[url];
       if (!entry || !entry.applied) return;
-      var link = li.querySelector('a');
+      var li = byUrl[url];
+      var link = li ? li.querySelector('a') : null;
       items.push({
-        url: li.dataset.url,
-        title: link ? link.textContent : li.dataset.url,
-        deadline: li.dataset.deadline || null,
-        board: li.dataset.board || '',
+        url: url,
+        title: link ? link.textContent : (entry.title || url),
+        deadline: li ? (li.dataset.deadline || null) : (entry.deadline || null),
+        board: li ? (li.dataset.board || '') : (entry.board || ''),
       });
     });
     items.sort(function(a, b) {
@@ -587,10 +596,17 @@ header.top {
   document.querySelectorAll('.apply-btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
       var url = btn.dataset.url;
+      var li = btn.closest('li');
       state[url] = state[url] || {};
       state[url].applied = !state[url].applied;
+      if (state[url].applied) {
+        var link = li.querySelector('a');
+        state[url].title = link ? link.textContent : url;
+        state[url].board = li.dataset.board || '';
+        state[url].deadline = li.dataset.deadline || null;
+      }
       saveState(state);
-      applyRowStyle(btn.closest('li'));
+      applyRowStyle(li);
       renderAppliedList();
     });
   });
