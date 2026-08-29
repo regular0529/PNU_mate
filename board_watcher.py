@@ -26,7 +26,9 @@ CATEGORY_KEYWORDS = {
     "장학금": ("장학금", "장학생"),
     "채용": ("채용", "인턴", "구인"),
     "공모전": ("공모전", "경진대회", "해커톤", "챌린지"),
+    "해외도전": ("해외도전", "해외전공봉사"),
 }
+PRIORITY_TAGS = {"해외도전"}
 DEADLINE_PATTERN = re.compile(r"~\s*\d{1,2}\s*/\s*\d{1,2}")
 DEADLINE_DATE_PATTERN = re.compile(r"~\s*(\d{1,2})\s*/\s*(\d{1,2})")
 
@@ -221,7 +223,8 @@ def build_notification_text(results: dict[str, dict]) -> str:
             for title, url in result["new"]:
                 tags = categorize_title(title)
                 tag_text = "".join(f"[{t}]" for t in tags)
-                lines.append(f"[{name}]{tag_text} {title}\n{url}")
+                prefix = "🚨🚨🚨 " if any(t in PRIORITY_TAGS for t in tags) else ""
+                lines.append(f"{prefix}[{name}]{tag_text} {title}\n{url}")
     return "\n\n".join(lines)
 
 
@@ -317,13 +320,14 @@ def generate_dashboard_html(
             badge = '<span class="new">NEW</span>' if is_new else ""
             tags = categorize_title(post_title)
             is_expired = "마감됨" in tags
+            is_priority = any(t in PRIORITY_TAGS for t in tags)
             tag_pills = "".join(f'<span class="tag tag-{t}">{t}</span>' for t in tags)
             preview = previews.get(url, "")
             preview_attr = f' data-preview="{html.escape(preview)}"' if preview else ""
             deadline = parse_title_deadline(post_title)
             deadline_attr = f' data-deadline="{deadline.isoformat()}"' if deadline else ""
             url_esc = html.escape(url)
-            row_class = " ".join(c for c in ["is-new" if is_new else "", "is-expired" if is_expired else ""] if c)
+            row_class = " ".join(c for c in ["is-new" if is_new else "", "is-expired" if is_expired else "", "is-priority" if is_priority else ""] if c)
             rows.append(
                 f'<li class="{row_class}" data-tags="{",".join(tags)}" data-board="{board_title}" '
                 f'data-search="{html.escape(post_title.lower())}" data-url="{url_esc}"{preview_attr}{deadline_attr}>'
@@ -590,6 +594,11 @@ header.top {{
 .tag-공모전 {{ color: var(--purple); }}
 .tag-마감임박 {{ color: var(--red); }}
 .tag-마감됨 {{ color: var(--text-faint); }}
+.tag-해외도전 {{ color: #fff; background: var(--red); border-color: var(--red); }}
+.panel li.is-priority {{
+  border-left-color: var(--red);
+  background: color-mix(in srgb, var(--red) 12%, transparent);
+}}
 .panel li.is-expired {{ opacity: 0.55; }}
 .panel li.is-expired a {{ text-decoration: line-through; }}
 .panel a {{
@@ -757,6 +766,7 @@ header.top {{
     <button class="filter-btn" data-tag="채용">채용</button>
     <button class="filter-btn" data-tag="공모전">공모전</button>
     <button class="filter-btn" data-tag="마감임박">마감임박</button>
+    <button class="filter-btn" data-tag="해외도전">해외도전</button>
     <button class="filter-btn" id="favBtn" data-fav="1">☆ 즐겨찾기만</button>
   </div>
 </div>
