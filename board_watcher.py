@@ -105,6 +105,10 @@ BOARDS = {
     "AI융합교육원": ("rss", "https://swedu.pusan.ac.kr/bbs/swedu/2265/rssList.do?row=50"),
     "부산대 공지사항": ("html", "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095"),
     "취업지원센터 공지": ("html", "https://job.pusan.ac.kr/ko/notice"),
+    # 부경대 ICEE는 부산대/동서대 프로그램도 교차 게시하는 컨소시엄 게시판이라 타대생 참가 가능
+    # 공모전/경진대회를 함께 볼 수 있음 (동서대·인제대는 별도 URL이 불안정해서 보류).
+    "부경대 공학교육혁신센터": ("html", "https://icee.pknu.ac.kr/icee/6620"),
+    "경상국립대 공학교육혁신센터": ("html", "https://abeek.gnu.ac.kr/board/notice"),
 }
 
 # html 게시판 중 목록이 &page=N 페이지네이션을 지원하는 곳만 여러 페이지를 이어붙임 (게시판 이름 -> 추가로 더 가져올 페이지 수)
@@ -115,6 +119,8 @@ LINK_PATTERNS = [
     re.compile(r"artclView\.do"),
     re.compile(r"mode=view.*board_seq="),
     re.compile(r"/notice/notice/view/\d+"),
+    re.compile(r"action=view&no=\d+"),
+    re.compile(r"board/notice/show/\d+"),
 ]
 
 
