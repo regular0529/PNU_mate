@@ -321,7 +321,8 @@ def generate_dashboard_html(
         new_urls = {url for _, url in result["new"]}
         previews = result.get("previews", {})
         rows = []
-        for post_title, url in result["posts"][:20]:
+        window = sorted(result["posts"][:20], key=lambda p: p[1] not in new_urls)
+        for post_title, url in window:
             is_new = url in new_urls
             badge = '<span class="new">NEW</span>' if is_new else ""
             tags = categorize_title(post_title)

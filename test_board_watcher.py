@@ -116,6 +116,17 @@ def test_dashboard_html_renders_summary():
     assert "오늘의 요약" not in out_no_summary
 
 
+def test_dashboard_html_puts_new_posts_first():
+    results = {
+        "산업공학과": {
+            "new": [("새 글", "https://x/new")],
+            "posts": [("옛날 글", "https://x/old"), ("새 글", "https://x/new")],
+        }
+    }
+    out = generate_dashboard_html(results)
+    assert out.index("새 글") < out.index("옛날 글")
+
+
 def test_deadlines_html_empty_when_no_items():
     assert build_deadlines_html([]) == ""
 
