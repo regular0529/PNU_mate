@@ -109,6 +109,7 @@ BOARDS = {
     # 공모전/경진대회를 함께 볼 수 있음 (동서대·인제대는 별도 URL이 불안정해서 보류).
     "부경대 공학교육혁신센터": ("html", "https://icee.pknu.ac.kr/icee/6620"),
     "경상국립대 공학교육혁신센터": ("html", "https://abeek.gnu.ac.kr/board/notice"),
+    "기계공학부 공지사항": ("me", "https://me.pusan.ac.kr/new/sub05/sub01_01.php"),
 }
 
 # html 게시판 중 목록이 &page=N 페이지네이션을 지원하는 곳만 여러 페이지를 이어붙임 (게시판 이름 -> 추가로 더 가져올 페이지 수)
@@ -124,17 +125,42 @@ LINK_PATTERNS = [
 ]
 
 
+# 인증서 체인이 불완전한 사이트(서버 설정 문제, 우리 쪽에서 못 고침) 전용 예외.
+# 공개 게시판 읽기 전용 요청이라 verify=False로 우회 — 자격정보 전송 없음.
+NO_VERIFY_HOSTS = {"me.pusan.ac.kr"}
+
+
 def fetch_html(url: str, retries: int = 3, timeout: int = 10) -> str:
+    from urllib.parse import urlparse
+    verify = urlparse(url).hostname not in NO_VERIFY_HOSTS
     last_error = None
     for attempt in range(retries):
         try:
-            resp = requests.get(url, timeout=timeout, headers={"User-Agent": "Mozilla/5.0"})
+            resp = requests.get(url, timeout=timeout, headers={"User-Agent": "Mozilla/5.0"}, verify=verify)
             resp.raise_for_status()
             return resp.text
         except requests.RequestException as e:
             last_error = e
             time.sleep(1)
     raise ConnectionError(f"{url} 접속 실패 ({retries}회 재시도): {last_error}")
+
+
+def extract_me_pusan_posts(html: str, base_url: str) -> list[tuple[str, str]]:
+    """me.pusan.ac.kr 게시판 전용: 글 링크가 <a href>가 아니라
+    javascript:goDetail(번호) 형태라 일반 extract_posts()로 못 읽음."""
+    soup = BeautifulSoup(html, "html.parser")
+    posts = []
+    seen = set()
+    for a in soup.select("td.title a"):
+        m = re.search(r"goDetail\((\d+)\)", a.get("href", ""))
+        if not m:
+            continue
+        title = next((t.strip() for t in a.contents if isinstance(t, str) and t.strip()), "")
+        url = f"{base_url}?seq={m.group(1)}&db=hakbunotice&page_mode=view"
+        if title and url not in seen:
+            posts.append((title, url))
+            seen.add(url)
+    return posts
 
 
 def extract_posts(html: str, base_url: str) -> list[tuple[str, str]]:
@@ -193,7 +219,12 @@ def check_boards(boards: dict[str, tuple[str, str]] = BOARDS) -> dict[str, dict]
     for name, (kind, url) in boards.items():
         try:
             body = fetch_html(url)
-            posts = extract_rss_posts(body, url) if kind == "rss" else extract_posts(body, url)
+            if kind == "rss":
+                posts = extract_rss_posts(body, url)
+            elif kind == "me":
+                posts = extract_me_pusan_posts(body, url)
+            else:
+                posts = extract_posts(body, url)
             if kind == "html" and name in MULTI_PAGE_BOARDS:
                 seen_urls = {p[1] for p in posts}
                 sep = "&" if "?" in url else "?"
