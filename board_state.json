@@ -52,6 +52,8 @@
     "https://ie.pusan.ac.kr/bbs/ie/182/1441555/artclView.do?layout=unknown"
   ],
   "교양교육원": [
+    "https://culedu.pusan.ac.kr/bbs/culedu/1827/1465662/artclView.do?layout=unknown",
+    "https://culedu.pusan.ac.kr/bbs/culedu/1827/1465296/artclView.do?layout=unknown",
     "https://culedu.pusan.ac.kr/bbs/culedu/1827/1464126/artclView.do?layout=unknown",
     "https://culedu.pusan.ac.kr/bbs/culedu/1827/1463856/artclView.do?layout=unknown",
     "https://culedu.pusan.ac.kr/bbs/culedu/1827/1463739/artclView.do?layout=unknown",
@@ -99,9 +101,7 @@
     "https://culedu.pusan.ac.kr/bbs/culedu/1827/1366570/artclView.do?layout=unknown",
     "https://culedu.pusan.ac.kr/bbs/culedu/1827/1366569/artclView.do?layout=unknown",
     "https://culedu.pusan.ac.kr/bbs/culedu/1827/1366568/artclView.do?layout=unknown",
-    "https://culedu.pusan.ac.kr/bbs/culedu/1827/1366567/artclView.do?layout=unknown",
-    "https://culedu.pusan.ac.kr/bbs/culedu/1827/1366566/artclView.do?layout=unknown",
-    "https://culedu.pusan.ac.kr/bbs/culedu/1827/1366565/artclView.do?layout=unknown"
+    "https://culedu.pusan.ac.kr/bbs/culedu/1827/1366567/artclView.do?layout=unknown"
   ],
   "PICEE": [
     "http://his.pusan.ac.kr/bbs/picee/9933/1764859/artclView.do",
@@ -187,7 +187,6 @@
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=2&mode=view&mgr_seq=3&board_seq=1511251",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=2&mode=view&mgr_seq=3&board_seq=1511250",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=2&mode=view&mgr_seq=3&board_seq=1511249",
-    "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=2&mode=view&mgr_seq=3&board_seq=1511248",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=2&mode=view&mgr_seq=3&board_seq=1511233",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=2&mode=view&mgr_seq=3&board_seq=1511228",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=2&mode=view&mgr_seq=3&board_seq=1511227",
@@ -196,7 +195,7 @@
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=2&mode=view&mgr_seq=3&board_seq=1511224",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=2&mode=view&mgr_seq=3&board_seq=1511222",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=2&mode=view&mgr_seq=3&board_seq=1511221",
-    "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1511220",
+    "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=2&mode=view&mgr_seq=3&board_seq=1511220",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1511219",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1511204",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1511203",
@@ -215,7 +214,8 @@
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1511068",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1511067",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1511066",
-    "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1511063"
+    "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1511063",
+    "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1511062"
   ],
   "취업지원센터 공지": [
     "https://job.pusan.ac.kr/ko/notice/notice/view/204400?p=1",
