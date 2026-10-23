@@ -170,12 +170,13 @@
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&mode=view&mgr_seq=3&board_seq=1511351",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&mode=view&mgr_seq=3&board_seq=1510825",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&mode=view&mgr_seq=3&board_seq=1509643",
+    "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&mode=view&mgr_seq=3&board_seq=1511733",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&mode=view&mgr_seq=3&board_seq=1511721",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&mode=view&mgr_seq=3&board_seq=1511717",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&mode=view&mgr_seq=3&board_seq=1511715",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&mode=view&mgr_seq=3&board_seq=1511713",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&mode=view&mgr_seq=3&board_seq=1511712",
-    "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&mode=view&mgr_seq=3&board_seq=1511707",
+    "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=2&mode=view&mgr_seq=3&board_seq=1511707",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=2&mode=view&mgr_seq=3&board_seq=1511706",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=2&mode=view&mgr_seq=3&board_seq=1511705",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=2&mode=view&mgr_seq=3&board_seq=1511702",
@@ -195,7 +196,7 @@
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=2&mode=view&mgr_seq=3&board_seq=1511681",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=2&mode=view&mgr_seq=3&board_seq=1511680",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=2&mode=view&mgr_seq=3&board_seq=1511679",
-    "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=2&mode=view&mgr_seq=3&board_seq=1511678",
+    "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1511678",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1511677",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1511672",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1511671",
@@ -214,8 +215,7 @@
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1511642",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1511639",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1511626",
-    "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1511623",
-    "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1511621"
+    "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1511623"
   ],
   "취업지원센터 공지": [
     "https://job.pusan.ac.kr/ko/notice/notice/view/204497?p=1",
@@ -240,6 +240,7 @@
     "https://job.pusan.ac.kr/ko/notice/notice/view/203798?p=1"
   ],
   "AI융합교육원": [
+    "https://swedu.pusan.ac.kr/bbs/swedu/2265/1468018/artclView.do?layout=unknown",
     "https://swedu.pusan.ac.kr/bbs/swedu/2265/1467925/artclView.do?layout=unknown",
     "https://swedu.pusan.ac.kr/bbs/swedu/2265/1467873/artclView.do?layout=unknown",
     "https://swedu.pusan.ac.kr/bbs/swedu/2265/1467715/artclView.do?layout=unknown",
@@ -288,8 +289,7 @@
     "https://swedu.pusan.ac.kr/bbs/swedu/2265/1443652/artclView.do?layout=unknown",
     "https://swedu.pusan.ac.kr/bbs/swedu/2265/1443282/artclView.do?layout=unknown",
     "https://swedu.pusan.ac.kr/bbs/swedu/2265/1443138/artclView.do?layout=unknown",
-    "https://swedu.pusan.ac.kr/bbs/swedu/2265/1443124/artclView.do?layout=unknown",
-    "https://swedu.pusan.ac.kr/bbs/swedu/2265/1442951/artclView.do?layout=unknown"
+    "https://swedu.pusan.ac.kr/bbs/swedu/2265/1443124/artclView.do?layout=unknown"
   ],
   "부경대 공학교육혁신센터": [
     "https://icee.pknu.ac.kr/icee/6620?action=view&no=9995997",
