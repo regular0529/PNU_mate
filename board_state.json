@@ -163,7 +163,6 @@
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&mode=view&mgr_seq=3&board_seq=1511938",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&mode=view&mgr_seq=3&board_seq=1511923",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&mode=view&mgr_seq=3&board_seq=1511888",
-    "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&mode=view&mgr_seq=3&board_seq=1511740",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&mode=view&mgr_seq=3&board_seq=1511716",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&mode=view&mgr_seq=3&board_seq=1509643",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&mode=view&mgr_seq=3&board_seq=1512181",
@@ -176,7 +175,7 @@
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&mode=view&mgr_seq=3&board_seq=1512132",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&mode=view&mgr_seq=3&board_seq=1512129",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&mode=view&mgr_seq=3&board_seq=1512127",
-    "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=2&mode=view&mgr_seq=3&board_seq=1512126",
+    "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&mode=view&mgr_seq=3&board_seq=1512126",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=2&mode=view&mgr_seq=3&board_seq=1512117",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=2&mode=view&mgr_seq=3&board_seq=1512116",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=2&mode=view&mgr_seq=3&board_seq=1512109",
@@ -196,8 +195,7 @@
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=2&mode=view&mgr_seq=3&board_seq=1512038",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=2&mode=view&mgr_seq=3&board_seq=1512028",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=2&mode=view&mgr_seq=3&board_seq=1512027",
-    "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1512023",
-    "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1512022",
+    "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=2&mode=view&mgr_seq=3&board_seq=1512023",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1512002",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1511990",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1511984",
@@ -215,7 +213,9 @@
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1511926",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1511918",
     "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1511881",
-    "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1511880"
+    "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1511880",
+    "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1511879",
+    "https://www.pusan.ac.kr/kor/CMS/Board/Board.do?mCode=MN095&page=3&mode=view&mgr_seq=3&board_seq=1511878"
   ],
   "취업지원센터 공지": [
     "https://job.pusan.ac.kr/ko/notice/notice/view/204590?p=1",
@@ -331,6 +331,8 @@
     "https://me.pusan.ac.kr/new/sub05/sub01_01.php?seq=5147&db=hakbunotice&page_mode=view",
     "https://me.pusan.ac.kr/new/sub05/sub01_01.php?seq=5183&db=hakbunotice&page_mode=view",
     "https://me.pusan.ac.kr/new/sub05/sub01_01.php?seq=5191&db=hakbunotice&page_mode=view",
+    "https://me.pusan.ac.kr/new/sub05/sub01_01.php?seq=5208&db=hakbunotice&page_mode=view",
+    "https://me.pusan.ac.kr/new/sub05/sub01_01.php?seq=5207&db=hakbunotice&page_mode=view",
     "https://me.pusan.ac.kr/new/sub05/sub01_01.php?seq=5206&db=hakbunotice&page_mode=view",
     "https://me.pusan.ac.kr/new/sub05/sub01_01.php?seq=5205&db=hakbunotice&page_mode=view",
     "https://me.pusan.ac.kr/new/sub05/sub01_01.php?seq=5204&db=hakbunotice&page_mode=view",
@@ -338,8 +340,6 @@
     "https://me.pusan.ac.kr/new/sub05/sub01_01.php?seq=5202&db=hakbunotice&page_mode=view",
     "https://me.pusan.ac.kr/new/sub05/sub01_01.php?seq=5200&db=hakbunotice&page_mode=view",
     "https://me.pusan.ac.kr/new/sub05/sub01_01.php?seq=5199&db=hakbunotice&page_mode=view",
-    "https://me.pusan.ac.kr/new/sub05/sub01_01.php?seq=5198&db=hakbunotice&page_mode=view",
-    "https://me.pusan.ac.kr/new/sub05/sub01_01.php?seq=5194&db=hakbunotice&page_mode=view",
-    "https://me.pusan.ac.kr/new/sub05/sub01_01.php?seq=5193&db=hakbunotice&page_mode=view"
+    "https://me.pusan.ac.kr/new/sub05/sub01_01.php?seq=5198&db=hakbunotice&page_mode=view"
   ]
 }
